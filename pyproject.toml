@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fedorc"
+version = "0.1.0"
+description = "Communication-efficient federated analytic class-incremental learning with orthogonal residual compensation."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "torch",
+    "torchvision",
+    "tqdm",
+]
+
+[project.scripts]
+fedorc-train = "fedorc.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
